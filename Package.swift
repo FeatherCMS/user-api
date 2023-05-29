@@ -4,15 +4,13 @@ import PackageDescription
 let package = Package(
     name: "user-objects",
     platforms: [
-       .macOS(.v10_15)
+       .macOS(.v12)
     ],
     products: [
         .library(name: "UserObjects", targets: ["UserObjects"]),
     ],
     dependencies: [
-//		.package(path: "../feather-objects"),
-        .package(url: "https://github.com/Rando-Coderissian/feather-objects", .branch("test-refactor-modules")),
-//        .package(url: "https://github.com/feathercms/feather-objects", .branch("main")),
+       .package(url: "https://github.com/feathercms/feather-objects", .branch("main")),
     ],
     targets: [
         .target(name: "UserObjects", dependencies: [
